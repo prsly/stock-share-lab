@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-// using System.Text;
 
 namespace Lab1
 {
@@ -27,15 +26,6 @@ namespace Lab1
                     dateBuy, share.AmountOfBuy, share.PriceOneOfBuy); 
             }
             DBList.Clear();
-            /* for (int i = 0; i < businessLogic.DBLength; i++)
-            {
-                share = businessLogic.Read(i);
-                dateBuy = Convert.ToString(share.DateOfBuy);
-                Console.WriteLine(Format,
-                    i+1,
-                    share.CompanyName.Length > 20 ? share.CompanyName.Remove(20) : share.CompanyName,
-                    dateBuy.Remove(10), share.AmountOfBuy, share.PriceOneOfBuy);
-            }*/
         }
 
         public void Menu()
@@ -53,7 +43,7 @@ namespace Lab1
                 Console.WriteLine("7.Сохранить");
                 Console.WriteLine("8.Загрузить");
                 Console.WriteLine("0.Выход из любого меню");
-                Console.WriteLine(businessLogic.DBLength);
+                
                 try
                 {
                     k = Convert.ToInt32(Console.ReadLine());

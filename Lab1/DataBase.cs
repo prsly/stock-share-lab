@@ -5,22 +5,15 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace Lab1
 {
     [Serializable]
-    sealed class Share//строка бд
+    sealed class Share //строка бд
     {
         public string CompanyName { get; set; }
-        public DateTime DateOfBuy { get; set; }
-        /* public int DayOfBuy { get; set; }
-         * public int MonthOfBuy { get; set; }
-         * public int YearOfBuy { get; set; } */    
+        public DateTime DateOfBuy { get; set; } 
         public int AmountOfBuy { get; set; }
         public double PriceOneOfBuy { get; set; }
-        // int dayOfBuy, int monthOfBuy, int yearOfBuy
         public Share(string companyName, DateTime dateOfBuy, int amountOfBuy, double priceOneOfBuy)
         {
             CompanyName = companyName;
-            /* DayOfBuy = dayOfBuy;
-             * MonthOfBuy = monthOfBuy;
-             * YearOfBuy = yearOfBuy; */
             DateOfBuy = dateOfBuy;
             AmountOfBuy = amountOfBuy;
             PriceOneOfBuy = priceOneOfBuy;
@@ -29,12 +22,12 @@ namespace Lab1
 
     //-База данных – список записей БД;
     [Serializable]
-    class DataBase//односвязный список строк бд
+    class DataBase //односвязный список строк бд
     {
         [Serializable]
         private class ShareList 
         {
-            private ShareList _next;//ссылка на следующий элемент в списке
+            private ShareList _next; //ссылка на следующий элемент в списке
             private Share _element;
             
             public Share Element
